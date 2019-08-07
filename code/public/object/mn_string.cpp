@@ -504,80 +504,6 @@ std::string ToLower(const std::string& str)
     return data;
 }
 
-std::string SlashTrim(const std::string& val, bool slash_end)
-{
-    int strLen = (int)val.length();
-    AutoMem<char, 512> auto_mem(strLen + 2);
-    char* data = auto_mem.GetBuf();
-    strcpy(data, val.c_str());
-
-    // "/" 统一转换成"\\"
-    for(int i=0; i<strLen; i++)
-    {
-        char tmp=*(data+i);
-        if('/'==tmp)
-            data[i]='\\';
-        else
-            data[i]=tmp;
-    }
-
-    // should end with "\\"
-    if(slash_end)
-    {
-        if(data[strLen-1] != '\\')
-        {
-            data[strLen]='\\';
-            data[strLen+1]='\0';
-        }
-        else
-        {
-            data[strLen]='\0';
-        }
-    }
-    // no need to end with "\\"
-    else    
-    {
-        if(data[strLen-1] != '\\')
-        {
-            data[strLen]='\0';
-        }
-        else
-        {
-            data[strLen-1]='\0';
-        }
-    }
-
-
-    return data;
-}
-
-
-// 去除str字符串中前后的指定字符
-std::string Trim(const std::string& str, const char ch)
-{
-    if (str.empty())
-    {
-        return "";
-    }
-
-    if (str[0] != ch && str[str.size()-1] != ch)
-    {
-        return str;
-    }
-
-    size_t pos_begin = str.find_first_not_of(ch, 0);
-    size_t pos_end = str.find_last_not_of(ch, str.size());
-
-    if (pos_begin == std::string::npos || pos_end == std::string::npos)
-    {
-        //这表示这个字符串里的字符全都是ch组成，把它设置为空串
-        return "";
-    }
-
-    return str.substr(pos_begin, pos_end - pos_begin + 1);
-}
-
-
 void    StrReplace(std::string& str, const std::string& old_value, const std::string& new_value)
 {
     while(true)
@@ -625,6 +551,31 @@ void Split(std::vector<std::string>& result, const std::string & str, const std:
 
     } while (pos != std::string::npos);
     return;
+}
+
+
+std::string Trim(const std::string& str, const char ch)
+{
+    if (str.empty())
+    {
+        return "";
+    }
+
+    if (str[0] != ch && str[str.size()-1] != ch)
+    {
+        return str;
+    }
+
+    size_t pos_begin = str.find_first_not_of(ch, 0);
+    size_t pos_end = str.find_last_not_of(ch, str.size());
+
+    if (pos_begin == std::string::npos || pos_end == std::string::npos)
+    {
+        //这表示这个字符串里的字符全都是ch组成，把它设置为空串
+        return "";
+    }
+
+    return str.substr(pos_begin, pos_end - pos_begin + 1);
 }
 
 bool CheckBigEndien ()

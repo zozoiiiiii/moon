@@ -44,6 +44,7 @@ using namespace rapidjson;
 NS_MN_BEGIN
 class ObjectMgr;
 class ReflectionMgr;
+class EventMgr;
 class BaseObject
 {
 	MN_BEGIN(BaseObject, "");
@@ -61,6 +62,7 @@ public:
     virtual void parseFromObjectString(const std::string& data);
 
     ObjectMgr* GetObjectMgr(){return m_pObjectMgr;}
+    EventMgr* GetEventMgr();
 	ReflectionMgr* GetReflectionMgr();
     MN_OBJECTID GetID(){return m_id;}
 	MetaClass* GetMetaClass() { return m_pMetaClass; };

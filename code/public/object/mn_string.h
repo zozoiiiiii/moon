@@ -36,9 +36,7 @@ std::string WStrToUtf8(const std::wstring& val);
 std::string ToUpper(const std::string& str);
 std::string ToLower(const std::string& str);
 
-// windows:"\\", linux: "/"
-std::string SlashTrim(const std::string& val, bool slash_end=false);
-std::string Trim(const std::string& str, const char ch = ' ');
+static std::string Trim(const std::string& str, const char ch = ' ');
 void StrReplace(std::string& str, const std::string& old_value, const std::string& new_value);
 void Split(std::vector<std::string>& paths, const std::string & szinput, const std::string& delims);
 

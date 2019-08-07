@@ -109,7 +109,7 @@
 		</Configuration>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="../../../Bin"
+			OutputDirectory="../../../../bin"
 			IntermediateDirectory="$(OutDir)/objs/$(ProjectName)"
 			ConfigurationType="1"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
@@ -141,7 +141,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="../../../thirdparties/DuiLib"
+				AdditionalIncludeDirectories="../../../;../../../external/amd_ogles/include"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -170,11 +170,11 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="DuiLib_d.lib"
+				AdditionalDependencies="libEGL.lib"
 				OutputFile="$(OutDir)\$(ProjectName)_d.exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
-				AdditionalLibraryDirectories="$(OutDir)"
+				AdditionalLibraryDirectories="../../../external/amd_ogles/lib"
 				GenerateDebugInformation="true"
 				ProgramDatabaseFile=".\Debug/GameDemo.pdb"
 				GenerateMapFile="true"
@@ -398,20 +398,144 @@
 	<References>
 	</References>
 	<Files>
+		<Filter
+			Name="public"
+			>
+			<File
+				RelativePath="..\..\..\public\util\file_util.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\..\public\util\file_util.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\..\public\util\time_util.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\..\public\util\time_util.h"
+				>
+			</File>
+			<Filter
+				Name="object"
+				>
+				<File
+					RelativePath="..\..\..\public\object\FastDelegate.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\FastDelegateBind.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_event_mgr.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_event_mgr.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_memory.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_meta_class.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_meta_field.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_meta_method.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_meta_method_void.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_object.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_object.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_object_mgr.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_object_mgr.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_reflection.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_reflection_mgr.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_string.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_string.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_type.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_var.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_var_helper.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_varlist.h"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="ecs"
+				>
+				<File
+					RelativePath="..\..\..\public\ecs\mn_entity.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\ecs\mn_entity.h"
+					>
+				</File>
+			</Filter>
+		</Filter>
 		<File
-			RelativePath="..\..\src\ControlEx.h"
+			RelativePath="..\..\src\demo.cpp"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\main.cpp"
+			RelativePath="..\..\src\demo.h"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\main_view.cpp"
+			RelativePath="..\..\src\egl_device.cpp"
 			>
 		</File>
 		<File
-			RelativePath="..\..\src\main_view.h"
+			RelativePath="..\..\src\egl_device.h"
+			>
+		</File>
+		<File
+			RelativePath="..\..\src\win_main.cpp"
 			>
 		</File>
 	</Files>

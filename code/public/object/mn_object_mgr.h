@@ -32,68 +32,26 @@ public:
         delete m_pEventMgr;
     }
 
-    inline  BaseObject* create(const std::string& strClassName, MN_OBJECTID id = MN_INVALID_OBJECTID);
-	inline  void destroy(MN_OBJECTID id);
-    inline  BaseObject* find(MN_OBJECTID id);
+    BaseObject* create(const std::string& strClassName, MN_OBJECTID id = MN_INVALID_OBJECTID);
+	void destroy(MN_OBJECTID id);
+    BaseObject* find(MN_OBJECTID id);
     ReflectionMgr* getReflectionMgr(){return m_pReflectionMgr;}
     EventMgr* getEventMgr(){return m_pEventMgr;}
+    virtual void setGlobal(const char* name, Var val);
+    virtual Var findGlobal(const char* name);
+    virtual BaseObject* findGlobalObject(const char* name);
+
+    // on excute
+    virtual void addExcute(BaseObject* pBaseObject);
+    virtual void removeExcute(BaseObject* pBaseObject);
+    virtual void onExcute(float sec);
 private:
     std::map<MN_OBJECTID, BaseObject*> m_pObjects;
+    std::map<std::string, Var> m_globalVars;
+    std::vector<MN_OBJECTID> m_pExcute;
 	ReflectionMgr* m_pReflectionMgr;
     EventMgr* m_pEventMgr;
     sint64 m_object_id_seed;
 };
-
-//////////////////////////////////////////////////
-
-BaseObject* ObjectMgr::create(const std::string& strClassName, MN_OBJECTID id)
-{
-    // get unique BaseObject id
-    MN_OBJECTID newid = m_object_id_seed++;
-
-    MetaClass* pec = m_pReflectionMgr->findMetaClass(strClassName);
-    if(pec == NULL || NULL == pec->create_func)
-        return NULL;
-
-    BaseObject* pBaseObject = (BaseObject*)pec->create_func();
-    if (!pBaseObject)
-        return NULL;
-
-    m_pObjects[newid] = pBaseObject;
-    pBaseObject->SetEntMgr(this);
-    pBaseObject->SetID(newid);
-    pBaseObject->SetCreator(pec);
-    pBaseObject->OnCreate();
-    //m_pEventMgr->Invoke(pBaseObject->GetID(), "ObjectCreated", pBaseObject->GetID());
-    return pBaseObject;
-}
-
-
-void ObjectMgr::destroy(MN_OBJECTID id)
-{
-    std::map<MN_OBJECTID, BaseObject*>::iterator itor = m_pObjects.find(id);
-    if(itor==m_pObjects.end())
-    {
-        return;
-    }
-
-    BaseObject* pBaseObject = itor->second;
-    pBaseObject->OnDestroy();
-    //m_pEventMgr->Invoke(pBaseObject->GetID(), "ObjectDestroyed", pBaseObject->GetID());
-    m_pObjects.erase(itor);
-
-    // destroy
-    MetaClass* pec = pBaseObject->GetMetaClass();
-    pec->destroy_func(pBaseObject);
-}
-
-BaseObject* ObjectMgr::find(MN_OBJECTID id)
-{
-    std::map<MN_OBJECTID, BaseObject*>::iterator itor = m_pObjects.find(id);
-    if(itor==m_pObjects.end())
-        return NULL;
-
-    return itor->second;
-}
 
 NS_MN_END

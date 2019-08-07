@@ -141,14 +141,14 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="../../../"
-				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;UILIB_EXPORTS"
+				AdditionalIncludeDirectories="../../../;../../../external/amd_ogles/include;../../../external/freetype/include"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="1"
 				UsePrecompiledHeader="0"
-				PrecompiledHeaderThrough="stdafx.h"
-				PrecompiledHeaderFile="$(OutDir)/objs/$(ProjectName)/DuiLib.pch"
+				PrecompiledHeaderThrough=""
+				PrecompiledHeaderFile=""
 				WarningLevel="3"
 				SuppressStartupBanner="true"
 				Detect64BitPortabilityProblems="false"
@@ -167,15 +167,16 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="$(OutDir)\$(ProjectName)_d.dll"
+				AdditionalDependencies="libEGL.lib libGLESv2.lib freetype.lib"
+				OutputFile="$(OutDir)\$(ProjectName).dll"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
-				AdditionalLibraryDirectories=""
-				GenerateManifest="false"
+				AdditionalLibraryDirectories="../../../external/amd_ogles/lib;../../../external/freetype/lib"
+				GenerateManifest="true"
 				DelayLoadDLLs=""
 				GenerateDebugInformation="true"
-				ProgramDatabaseFile="$(OutDir)\$(TargetName).pdb"
-				BaseAddress="0x11000000"
+				ProgramDatabaseFile="$(TargetDir)$(TargetName).pdb"
+				BaseAddress=""
 				ImportLibrary="$(TargetDir)$(TargetName).lib"
 				TargetMachine="1"
 			/>
@@ -192,7 +193,7 @@
 			<Tool
 				Name="VCBscMakeTool"
 				SuppressStartupBanner="true"
-				OutputFile=".\Debug/DuiLib.bsc"
+				OutputFile="$(OutDir)/$(ProjectName).bsc"
 			/>
 			<Tool
 				Name="VCFxCopTool"
@@ -399,135 +400,299 @@
 		<Filter
 			Name="src"
 			>
+			<File
+				RelativePath="..\..\src\gui.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\gui.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\image_component.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\image_component.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\item.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\item.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\mouse_area.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\mouse_area.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\rectangle_component.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\rectangle_component.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\text_component.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\text_component.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\ui_main.cpp"
+				>
+			</File>
 			<Filter
-				Name="windows"
+				Name="font"
 				>
 				<File
-					RelativePath="..\..\src\windows\main.cpp"
+					RelativePath="..\..\src\font\font.cpp"
 					>
 				</File>
-				<Filter
-					Name="Utils"
+				<File
+					RelativePath="..\..\src\font\font.h"
 					>
-					<File
-						RelativePath="..\..\src\windows\Utils\stb_image.c"
-						>
-					</File>
-					<File
-						RelativePath="..\..\src\windows\Utils\Utils.cpp"
-						>
-					</File>
-					<File
-						RelativePath="..\..\src\windows\Utils\WinImplBase.cpp"
-						>
-					</File>
-					<File
-						RelativePath="..\..\src\windows\Utils\WndShadow.cpp"
-						>
-					</File>
-				</Filter>
-				<Filter
-					Name="Core"
+				</File>
+				<File
+					RelativePath="..\..\src\font\font_manager.cpp"
 					>
-					<File
-						RelativePath="..\..\src\windows\Core\mn_window.cpp"
-						>
-					</File>
-					<File
-						RelativePath="..\..\src\windows\Core\mn_window.h"
-						>
-					</File>
-					<File
-						RelativePath="..\..\src\windows\Core\UIBase.cpp"
-						>
-					</File>
-					<File
-						RelativePath="..\..\src\windows\Core\UIControl.cpp"
-						>
-					</File>
-					<File
-						RelativePath="..\..\src\windows\Core\UIDlgBuilder.cpp"
-						>
-					</File>
-					<File
-						RelativePath="..\..\src\windows\Core\UIManager.cpp"
-						>
-					</File>
-					<File
-						RelativePath="..\..\src\windows\Core\UIMarkup.cpp"
-						>
-					</File>
-					<File
-						RelativePath="..\..\src\windows\Core\UIRender.cpp"
-						>
-					</File>
-				</Filter>
+				</File>
+				<File
+					RelativePath="..\..\src\font\font_manager.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\src\font\GlyphAtlas.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\src\font\GlyphAtlas.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\src\font\GlyphData.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\src\font\GlyphData.h"
+					>
+				</File>
 			</Filter>
 		</Filter>
 		<Filter
 			Name="inc"
 			>
 			<File
-				RelativePath="..\..\inc\msg_id.h"
+				RelativePath="..\..\inc\i_gui.h"
 				>
 			</File>
-			<File
-				RelativePath="..\..\inc\UIlib.h"
-				>
-			</File>
+		</Filter>
+		<Filter
+			Name="public"
+			>
 			<Filter
-				Name="Utils"
+				Name="object"
 				>
 				<File
-					RelativePath="..\..\inc\Utils\stb_image.h"
+					RelativePath="..\..\..\public\object\FastDelegate.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\inc\Utils\Utils.h"
+					RelativePath="..\..\..\public\object\FastDelegateBind.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\inc\Utils\WinImplBase.h"
+					RelativePath="..\..\..\public\object\mn_event_mgr.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\inc\Utils\WndShadow.h"
+					RelativePath="..\..\..\public\object\mn_event_mgr.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_memory.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_meta_class.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_meta_field.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_meta_method.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_meta_method_void.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_object.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_object.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_object_mgr.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_object_mgr.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_reflection.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_reflection_mgr.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_string.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_string.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_type.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_var.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_var_helper.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\public\object\mn_varlist.h"
 					>
 				</File>
 			</Filter>
 			<Filter
-				Name="Core"
+				Name="math"
+				>
+				<Filter
+					Name="inc"
+					>
+					<File
+						RelativePath="..\..\..\public\math\inc\mn_aabb.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\public\math\inc\mn_frustum.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\public\math\inc\mn_mat4f.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\public\math\inc\mn_math.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\public\math\inc\mn_math_func.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\public\math\inc\mn_plane.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\public\math\inc\mn_quaternion.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\public\math\inc\mn_ray.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\public\math\inc\mn_vec2f.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\public\math\inc\mn_vec3f.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\public\math\inc\mn_vec4f.h"
+						>
+					</File>
+				</Filter>
+				<Filter
+					Name="src"
+					>
+					<File
+						RelativePath="..\..\..\public\math\src\mn_aabb.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\public\math\src\mn_frustum.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\public\math\src\mn_mat4f.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\public\math\src\mn_math_func.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\public\math\src\mn_plane.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\public\math\src\mn_quaternion.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\public\math\src\mn_ray.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\public\math\src\mn_vec2f.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\public\math\src\mn_vec4f.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\..\public\math\src\mn_vect3f.cpp"
+						>
+					</File>
+				</Filter>
+			</Filter>
+			<Filter
+				Name="ecs"
 				>
 				<File
-					RelativePath="..\..\inc\Core\i_window.h"
+					RelativePath="..\..\..\public\ecs\mn_entity.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\inc\Core\UIBase.h"
-					>
-				</File>
-				<File
-					RelativePath="..\..\inc\Core\UIControl.h"
-					>
-				</File>
-				<File
-					RelativePath="..\..\inc\Core\UIDefine.h"
-					>
-				</File>
-				<File
-					RelativePath="..\..\inc\Core\UIDlgBuilder.h"
-					>
-				</File>
-				<File
-					RelativePath="..\..\inc\Core\UIManager.h"
-					>
-				</File>
-				<File
-					RelativePath="..\..\inc\Core\UIMarkup.h"
-					>
-				</File>
-				<File
-					RelativePath="..\..\inc\Core\UIRender.h"
+					RelativePath="..\..\..\public\ecs\mn_entity.h"
 					>
 				</File>
 			</Filter>

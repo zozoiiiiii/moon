@@ -11,6 +11,9 @@
 #include "mn_reflection.h"
 #include "mn_var.h"
 
+
+#define MN_REG(reflectionMgr, cls) reflectionMgr->regCreator(cls::MetaClassInstance());
+
 NS_MN_BEGIN
 
 class ReflectionMgr

@@ -236,6 +236,12 @@ ReflectionMgr* BaseObject::GetReflectionMgr()
     return m_pObjectMgr->getReflectionMgr();
 }
 
+
+EventMgr* BaseObject::GetEventMgr()
+{
+    return m_pObjectMgr->getEventMgr();
+}
+
 bool BaseObject::IsInstanceOf(const std::string& strClassName)
 {
 	ReflectionMgr* pReflectionMgr = GetObjectMgr()->getReflectionMgr();
