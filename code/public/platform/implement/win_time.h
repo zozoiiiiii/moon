@@ -7,6 +7,7 @@
 /************************************************************************/
 #pragma once
 
+#include "../mn_platform.h"
 #include <windows.h>
 #include <time.h>
 

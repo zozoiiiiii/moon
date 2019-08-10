@@ -43,18 +43,18 @@ typedef uint64_t                        uint64;
 #endif
 
 
-// variant type
-// enum MNVarType
-// {
-// 	MNVT_UNKNOWN,
-// 	MNVT_BOOL,
-// 	MNVT_SINT32,
-// 	MNVT_SINT64,
-// 	MNVT_FLOAT,
-// 	MNVT_DOUBLE,
-// 	MNVT_STRING,
-// 	MNVT_WSTRING,
-// 	MNVT_CLASS,
-// 	MNVT_CLASS_POINTER,
-// 	MNVT_MAX,
-// };
+//variant type
+enum MNVarType
+{
+	MNVT_UNKNOWN,
+	MNVT_BOOL,
+	MNVT_SINT32,
+	MNVT_SINT64,
+	MNVT_FLOAT,
+	MNVT_DOUBLE,
+	MNVT_STRING,
+	MNVT_WSTRING,
+	MNVT_CLASS,
+	MNVT_CLASS_POINTER,
+	MNVT_MAX,
+};

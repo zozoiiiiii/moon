@@ -2,9 +2,7 @@
 /*
 @author:  junliang
 @time:    20190810
-@brief:   time
-	sint64 nTimeStamp = MNTime::TimeStamp();
-	std::string strTimeStamp = MNTime::StrTimeStamp();
+@brief:   
 */
 /************************************************************************/
 #pragma once
@@ -13,7 +11,7 @@
 #include "mn_platform.h"
 
 #ifdef _MN_PLATFORM_WIN32_
-#include "implement/win_time.h"
+#include "implement/win_memory.h"
 #endif
 
 #ifdef _MN_PLATFORM_ANDROID_
