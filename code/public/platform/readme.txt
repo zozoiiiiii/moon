@@ -1,0 +1,1 @@
+this platform sdk is cross platform, header only, every module based on this
