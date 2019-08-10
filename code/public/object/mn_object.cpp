@@ -2,7 +2,7 @@
 #include "mn_object_mgr.h"
 #include "mn_memory.h"
 #include "mn_reflection_mgr.h"
-#include "mn_string.h"
+#include "platform/mn_string.h"
 
 NS_MN_BEGIN
 
@@ -336,25 +336,25 @@ bool BaseObject::setFieldValueFromStr(ReflectionMgr* pReflectionMgr, MetaField* 
         break;
     case MNVT_SINT32:
         {
-            sint32 iValue = StrToInt32(str);
+            sint32 iValue = MNString::StrToInt32(str);
             pMetaField->Set(pClassInstance, &iValue);
             break;
         }
     case MNVT_SINT64:
         {
-            sint64 val = StrToInt64(str);
+            sint64 val = MNString::StrToInt64(str);
             pMetaField->Set(pClassInstance, &val);
             break;
         }
     case MNVT_FLOAT:
         {
-            float val = StrToFloat(str);
+            float val = MNString::StrToFloat(str);
             pMetaField->Set(pClassInstance, &val);
             break;
         }
     case MNVT_DOUBLE:
         {
-            double val = StrToFloat(str);
+            double val = MNString::StrToFloat(str);
             pMetaField->Set(pClassInstance, &val);
             break;
         }
@@ -365,7 +365,7 @@ bool BaseObject::setFieldValueFromStr(ReflectionMgr* pReflectionMgr, MetaField* 
         }
     case MNVT_WSTRING:
         {
-            std::wstring wstr = Utf8ToWStr(str);
+            std::wstring wstr = MNString::Utf8ToWStr(str);
             pMetaField->Set(pClassInstance, &wstr);
             break;
         }
@@ -398,26 +398,26 @@ bool BaseObject::getFieldValueToStr(ReflectionMgr* pReflectionMgr, MetaField* pM
     case MNVT_SINT32:
         {
             int nVal = *(int*)pPropVal;
-            str = Int32ToStr(nVal);
+            str = MNString::Int32ToStr(nVal);
         }
         break;
 
     case MNVT_SINT64:
         {
             sint64 val64 = *(sint64*)pPropVal;
-            str= Int64ToStr(val64);
+            str= MNString::Int64ToStr(val64);
         }
         break;
     case MNVT_FLOAT:
         {
             float fVal = *(float*)pPropVal;
-            str= FloatToStr(fVal);
+            str= MNString::FloatToStr(fVal);
         }
         break;
     case MNVT_DOUBLE:
         {
             double dVal = *(double*)pPropVal;
-            str= DoubleToStr(dVal);
+            str= MNString::DoubleToStr(dVal);
         }
         break;
     case MNVT_STRING:
@@ -426,7 +426,7 @@ bool BaseObject::getFieldValueToStr(ReflectionMgr* pReflectionMgr, MetaField* pM
     case MNVT_WSTRING:
         {
             const std::wstring& wstrVal = *(std::wstring*)pPropVal;
-            str= WStrToUtf8(wstrVal);
+            str= MNString::WStrToUtf8(wstrVal);
         }
         break;
     default:

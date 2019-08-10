@@ -1,7 +1,7 @@
 #include "Anim.h"
 #include <assert.h>
 #include <math.h>
-#include "public/util/time_util.h"
+#include "platform/mn_time.h"
 
 #define GL_GLEXT_PROTOTYPES
 #include <GLES2/gl2.h>
@@ -287,8 +287,8 @@ void Anim::render(IShader* sr)
     glUniform1i(u_hasAnimation, 1);
 
     // 获得程序启动之后的时间，单位是秒
-    static sint64 startTime = TimeUtil::TimeStamp();
-    sint64 timeInterval = TimeUtil::TimeStamp() - startTime;
+    static sint64 startTime = MNTime::TimeStamp();
+    sint64 timeInterval = MNTime::TimeStamp() - startTime;
     float fdetla = (float)timeInterval/1000.0f;
     fdetla /= 1000.0f;
     SetPose(fdetla);

@@ -7,7 +7,7 @@
 /************************************************************************/
 #pragma once
 
-#include "mn_type.h"
+#include "platform/mn_platform.h"
 #include "mn_reflection.h"
 #include "mn_var.h"
 

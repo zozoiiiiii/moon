@@ -58,3 +58,9 @@ enum MNVarType
 	MNVT_CLASS_POINTER,
 	MNVT_MAX,
 };
+// namespace
+#ifndef NS_MN_BEGIN
+#define NS_MN_BEGIN                     namespace MN{
+#define NS_MN_END                       }
+#define USING_NS_MN                     using namespace MN;
+#endif

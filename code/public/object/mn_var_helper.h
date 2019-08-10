@@ -8,7 +8,7 @@
 #pragma once
 #include <string>
 #include <wchar.h>
-#include "mn_type.h"
+#include "platform/mn_platform.h"
 
 
 // variant flag
