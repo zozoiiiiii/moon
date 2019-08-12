@@ -8,8 +8,8 @@
 
 
 int g_nCnt;
-CThread* g_pThread;
-CThreadWaiter* g_pThreadWaiter;
+MNThread* g_pThread;
+MNThreadWaiter* g_pThreadWaiter;
 void ThreadFunc(void* lpParameter)
 {
     for(;;)
@@ -27,8 +27,8 @@ void ThreadFunc(void* lpParameter)
 int main()
 {
     g_nCnt=9;
-    g_pThreadWaiter = new CThreadWaiter();
-    g_pThread = new CThread(&ThreadFunc, &g_nCnt);
+    g_pThreadWaiter = new MNThreadWaiter();
+    g_pThread = new MNThread(&ThreadFunc, &g_nCnt);
     Sleep(5000);
     delete g_pThread;
 	return 0;

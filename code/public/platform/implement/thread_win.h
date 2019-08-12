@@ -11,55 +11,43 @@
 #include <process.h>
 
 
-class CThread
+class MNThread
 {
 private:
 	typedef void (__cdecl* THREAD_FUNC)(void*);
 public:
-	CThread(THREAD_FUNC func, void* context)
+	MNThread(THREAD_FUNC func, void* context)
 	{
 		m_threadFunc = func;
         m_hThread = (HANDLE)_beginthread(func, 0, context);
 	}
 	
-	~CThread()
+	~MNThread()
     {
         if (m_hThread != NULL)
         {
-            WaitThreadExit(m_hThread);
-            m_hThread = NULL;
+            DWORD res = WaitForSingleObject(m_hThread, 1000);
+            if (res == WAIT_TIMEOUT)
+            {
+                TerminateThread(m_hThread, 1);
+            }
         }
     }
-private:
-	bool WaitThreadExit(HANDLE handle)
-	{
-		DWORD res = WaitForSingleObject(handle, 1000);
-		if (res == WAIT_OBJECT_0)
-		{
-			return true;
-		}
-		else if (res == WAIT_TIMEOUT)
-		{
-            TerminateThread(handle, 1);
-		}
-		return true;
-	}
-
 private:
 	THREAD_FUNC m_threadFunc;
 	HANDLE m_hThread;
 };
 
 
-class CThreadWaiter
+class MNThreadWaiter
 {
 public:
-	CThreadWaiter()
+	MNThreadWaiter()
 	{
 		m_hEvent = CreateEvent(NULL, FALSE, TRUE, NULL);
 	}
 
-	~CThreadWaiter()
+	~MNThreadWaiter()
 	{
 		CloseHandle(m_hEvent);
 	}
