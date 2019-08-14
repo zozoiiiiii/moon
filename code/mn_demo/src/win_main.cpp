@@ -14,6 +14,7 @@
 #include "public/object/mn_object_mgr.h"
 #include "mn_render/inc/i_render.h"
 #include "mn_ui/inc/i_gui.h"
+#include "platform/mn_thread.h"
 
 EGLDevice g_eglDevice;
 LRESULT CALLBACK WndProc( HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam )
