@@ -1,12 +1,12 @@
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mn_demo", "mn_demo\build\windows\mn_demo.vcproj", "{21B017E7-7805-40D5-9D96-AABF572F57D1}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mn_demo", "mn_demo.vcproj", "{21B017E7-7805-40D5-9D96-AABF572F57D1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mn_input", "mn_input\build\windows\mn_input.vcproj", "{22246836-E303-4E61-81E2-6CC9748ED7DD}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mn_input", "mn_input.vcproj", "{22246836-E303-4E61-81E2-6CC9748ED7DD}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mn_ui", "mn_ui\build\windows\mn_ui.vcproj", "{E106ACD7-4E53-4AEE-942B-D0DD426DB34E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mn_ui", "mn_ui.vcproj", "{E106ACD7-4E53-4AEE-942B-D0DD426DB34E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mn_render", "mn_render\build\windows\mn_render.vcproj", "{D2BA80E4-6907-4BCE-8EA1-3042BDCC077B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mn_render", "mn_render.vcproj", "{D2BA80E4-6907-4BCE-8EA1-3042BDCC077B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

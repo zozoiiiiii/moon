@@ -18,7 +18,7 @@
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="../../../../bin"
+			OutputDirectory="../../../bin"
 			IntermediateDirectory="$(OutDir)/objs/$(ProjectName)"
 			ConfigurationType="2"
 			CharacterSet="1"
@@ -41,7 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="../../../;../../../external/amd_ogles/include"
+				AdditionalIncludeDirectories="../../;../../external/amd_ogles/include"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;MN_INPUT_EXPORTS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -63,7 +63,7 @@
 				Name="VCLinkerTool"
 				AdditionalDependencies="libEGL.lib libGLESv2.lib"
 				LinkIncremental="2"
-				AdditionalLibraryDirectories="../../../external/amd_ogles/lib"
+				AdditionalLibraryDirectories="../../external/amd_ogles/lib"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				TargetMachine="1"
@@ -174,38 +174,38 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath="..\..\src\platform.h"
+				RelativePath="..\..\mn_render\src\platform.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\render.cpp"
+				RelativePath="..\..\mn_render\src\render.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\render.h"
+				RelativePath="..\..\mn_render\src\render.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\render_deferred.cpp"
+				RelativePath="..\..\mn_render\src\render_deferred.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\render_forward.cpp"
+				RelativePath="..\..\mn_render\src\render_forward.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\render_main.cpp"
+				RelativePath="..\..\mn_render\src\render_main.cpp"
 				>
 			</File>
 			<Filter
 				Name="batch"
 				>
 				<File
-					RelativePath="..\..\src\batch\batch_group.cpp"
+					RelativePath="..\..\mn_render\src\batch\batch_group.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\batch\batch_group.h"
+					RelativePath="..\..\mn_render\src\batch\batch_group.h"
 					>
 				</File>
 			</Filter>
@@ -213,43 +213,43 @@
 				Name="res"
 				>
 				<File
-					RelativePath="..\..\src\res\framebuffer.cpp"
+					RelativePath="..\..\mn_render\src\res\framebuffer.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\res\framebuffer.h"
+					RelativePath="..\..\mn_render\src\res\framebuffer.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\res\renderbuffer.cpp"
+					RelativePath="..\..\mn_render\src\res\renderbuffer.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\res\renderbuffer.h"
+					RelativePath="..\..\mn_render\src\res\renderbuffer.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\res\res_mgr.cpp"
+					RelativePath="..\..\mn_render\src\res\res_mgr.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\res\res_mgr.h"
+					RelativePath="..\..\mn_render\src\res\res_mgr.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\res\shader.cpp"
+					RelativePath="..\..\mn_render\src\res\shader.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\res\shader.h"
+					RelativePath="..\..\mn_render\src\res\shader.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\res\texture.cpp"
+					RelativePath="..\..\mn_render\src\res\texture.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\res\texture.h"
+					RelativePath="..\..\mn_render\src\res\texture.h"
 					>
 				</File>
 			</Filter>
@@ -257,35 +257,35 @@
 				Name="model"
 				>
 				<File
-					RelativePath="..\..\src\model\anim.cpp"
+					RelativePath="..\..\mn_render\src\model\anim.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\model\anim.h"
+					RelativePath="..\..\mn_render\src\model\anim.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\model\mesh.cpp"
+					RelativePath="..\..\mn_render\src\model\mesh.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\model\mesh.h"
+					RelativePath="..\..\mn_render\src\model\mesh.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\model\model_res.cpp"
+					RelativePath="..\..\mn_render\src\model\model_res.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\model\model_res.h"
+					RelativePath="..\..\mn_render\src\model\model_res.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\model\skeleton.cpp"
+					RelativePath="..\..\mn_render\src\model\skeleton.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\model\skeleton.h"
+					RelativePath="..\..\mn_render\src\model\skeleton.h"
 					>
 				</File>
 			</Filter>
@@ -296,46 +296,46 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath="..\..\inc\i_batch.h"
+				RelativePath="..\..\mn_render\inc\i_batch.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\inc\i_painter.h"
+				RelativePath="..\..\mn_render\inc\i_painter.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\inc\i_render.h"
+				RelativePath="..\..\mn_render\inc\i_render.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\inc\i_render_context.h"
+				RelativePath="..\..\mn_render\inc\i_render_context.h"
 				>
 			</File>
 			<Filter
 				Name="res"
 				>
 				<File
-					RelativePath="..\..\inc\res\i_framebuffer.h"
+					RelativePath="..\..\mn_render\inc\res\i_framebuffer.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\inc\res\i_renderbuffer.h"
+					RelativePath="..\..\mn_render\inc\res\i_renderbuffer.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\inc\res\i_res.h"
+					RelativePath="..\..\mn_render\inc\res\i_res.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\inc\res\i_res_mgr.h"
+					RelativePath="..\..\mn_render\inc\res\i_res_mgr.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\inc\res\i_shader.h"
+					RelativePath="..\..\mn_render\inc\res\i_shader.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\inc\res\i_texture.h"
+					RelativePath="..\..\mn_render\inc\res\i_texture.h"
 					>
 				</File>
 			</Filter>
@@ -343,19 +343,19 @@
 				Name="model"
 				>
 				<File
-					RelativePath="..\..\inc\model\i_anim.h"
+					RelativePath="..\..\mn_render\inc\model\i_anim.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\inc\model\i_mesh.h"
+					RelativePath="..\..\mn_render\inc\model\i_mesh.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\inc\model\i_model_res.h"
+					RelativePath="..\..\mn_render\inc\model\i_model_res.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\inc\model\i_skeleton.h"
+					RelativePath="..\..\mn_render\inc\model\i_skeleton.h"
 					>
 				</File>
 			</Filter>
@@ -367,87 +367,87 @@
 				Name="object"
 				>
 				<File
-					RelativePath="..\..\..\public\object\FastDelegate.h"
+					RelativePath="..\..\public\object\FastDelegate.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\FastDelegateBind.h"
+					RelativePath="..\..\public\object\FastDelegateBind.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_event_mgr.cpp"
+					RelativePath="..\..\public\object\mn_event_mgr.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_event_mgr.h"
+					RelativePath="..\..\public\object\mn_event_mgr.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_memory.h"
+					RelativePath="..\..\public\object\mn_memory.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_meta_class.h"
+					RelativePath="..\..\public\object\mn_meta_class.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_meta_field.h"
+					RelativePath="..\..\public\object\mn_meta_field.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_meta_method.h"
+					RelativePath="..\..\public\object\mn_meta_method.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_meta_method_void.h"
+					RelativePath="..\..\public\object\mn_meta_method_void.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_object.cpp"
+					RelativePath="..\..\public\object\mn_object.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_object.h"
+					RelativePath="..\..\public\object\mn_object.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_object_mgr.cpp"
+					RelativePath="..\..\public\object\mn_object_mgr.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_object_mgr.h"
+					RelativePath="..\..\public\object\mn_object_mgr.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_reflection.h"
+					RelativePath="..\..\public\object\mn_reflection.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_reflection_mgr.h"
+					RelativePath="..\..\public\object\mn_reflection_mgr.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_string.cpp"
+					RelativePath="..\..\public\object\mn_string.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_string.h"
+					RelativePath="..\..\public\object\mn_string.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_type.h"
+					RelativePath="..\..\public\object\mn_type.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_var.h"
+					RelativePath="..\..\public\object\mn_var.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_var_helper.h"
+					RelativePath="..\..\public\object\mn_var_helper.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_varlist.h"
+					RelativePath="..\..\public\object\mn_varlist.h"
 					>
 				</File>
 			</Filter>
@@ -458,47 +458,47 @@
 					Name="inc"
 					>
 					<File
-						RelativePath="..\..\..\public\math\inc\mn_aabb.h"
+						RelativePath="..\..\public\math\inc\mn_aabb.h"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\inc\mn_frustum.h"
+						RelativePath="..\..\public\math\inc\mn_frustum.h"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\inc\mn_mat4f.h"
+						RelativePath="..\..\public\math\inc\mn_mat4f.h"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\inc\mn_math.h"
+						RelativePath="..\..\public\math\inc\mn_math.h"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\inc\mn_math_func.h"
+						RelativePath="..\..\public\math\inc\mn_math_func.h"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\inc\mn_plane.h"
+						RelativePath="..\..\public\math\inc\mn_plane.h"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\inc\mn_quaternion.h"
+						RelativePath="..\..\public\math\inc\mn_quaternion.h"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\inc\mn_ray.h"
+						RelativePath="..\..\public\math\inc\mn_ray.h"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\inc\mn_vec2f.h"
+						RelativePath="..\..\public\math\inc\mn_vec2f.h"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\inc\mn_vec3f.h"
+						RelativePath="..\..\public\math\inc\mn_vec3f.h"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\inc\mn_vec4f.h"
+						RelativePath="..\..\public\math\inc\mn_vec4f.h"
 						>
 					</File>
 				</Filter>
@@ -506,43 +506,43 @@
 					Name="src"
 					>
 					<File
-						RelativePath="..\..\..\public\math\src\mn_aabb.cpp"
+						RelativePath="..\..\public\math\src\mn_aabb.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\src\mn_frustum.cpp"
+						RelativePath="..\..\public\math\src\mn_frustum.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\src\mn_mat4f.cpp"
+						RelativePath="..\..\public\math\src\mn_mat4f.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\src\mn_math_func.cpp"
+						RelativePath="..\..\public\math\src\mn_math_func.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\src\mn_plane.cpp"
+						RelativePath="..\..\public\math\src\mn_plane.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\src\mn_quaternion.cpp"
+						RelativePath="..\..\public\math\src\mn_quaternion.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\src\mn_ray.cpp"
+						RelativePath="..\..\public\math\src\mn_ray.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\src\mn_vec2f.cpp"
+						RelativePath="..\..\public\math\src\mn_vec2f.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\src\mn_vec4f.cpp"
+						RelativePath="..\..\public\math\src\mn_vec4f.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\src\mn_vect3f.cpp"
+						RelativePath="..\..\public\math\src\mn_vect3f.cpp"
 						>
 					</File>
 				</Filter>
@@ -551,11 +551,11 @@
 				Name="ecs"
 				>
 				<File
-					RelativePath="..\..\..\public\ecs\mn_entity.cpp"
+					RelativePath="..\..\public\ecs\mn_entity.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\ecs\mn_entity.h"
+					RelativePath="..\..\public\ecs\mn_entity.h"
 					>
 				</File>
 			</Filter>
@@ -563,11 +563,11 @@
 				Name="util"
 				>
 				<File
-					RelativePath="..\..\..\public\util\time_util.cpp"
+					RelativePath="..\..\public\util\time_util.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\util\time_util.h"
+					RelativePath="..\..\public\util\time_util.h"
 					>
 				</File>
 			</Filter>
@@ -579,19 +579,19 @@
 				Name="texture"
 				>
 				<File
-					RelativePath="..\..\..\external\texture\stb_image_aug.c"
+					RelativePath="..\..\external\texture\stb_image_aug.c"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\external\texture\stb_image_aug.h"
+					RelativePath="..\..\external\texture\stb_image_aug.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\external\texture\stbi_DDS_aug.h"
+					RelativePath="..\..\external\texture\stbi_DDS_aug.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\external\texture\stbi_DDS_aug_c.h"
+					RelativePath="..\..\external\texture\stbi_DDS_aug_c.h"
 					>
 				</File>
 			</Filter>

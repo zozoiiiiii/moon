@@ -109,7 +109,7 @@
 		</Configuration>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="../../../../bin"
+			OutputDirectory="../../../bin"
 			IntermediateDirectory="$(OutDir)/objs/$(ProjectName)"
 			ConfigurationType="2"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
@@ -141,7 +141,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="../../../;../../../external/amd_ogles/include;../../../external/freetype/include"
+				AdditionalIncludeDirectories="../../;../../external/amd_ogles/include;../../external/freetype/include"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -171,7 +171,7 @@
 				OutputFile="$(OutDir)\$(ProjectName).dll"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
-				AdditionalLibraryDirectories="../../../external/amd_ogles/lib;../../../external/freetype/lib"
+				AdditionalLibraryDirectories="../../external/amd_ogles/lib;../../external/freetype/lib"
 				GenerateManifest="true"
 				DelayLoadDLLs=""
 				GenerateDebugInformation="true"
@@ -401,90 +401,90 @@
 			Name="src"
 			>
 			<File
-				RelativePath="..\..\src\gui.cpp"
+				RelativePath="..\..\mn_ui\src\gui.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\gui.h"
+				RelativePath="..\..\mn_ui\src\gui.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\image_component.cpp"
+				RelativePath="..\..\mn_ui\src\image_component.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\image_component.h"
+				RelativePath="..\..\mn_ui\src\image_component.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\item.cpp"
+				RelativePath="..\..\mn_ui\src\item.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\item.h"
+				RelativePath="..\..\mn_ui\src\item.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\mouse_area.cpp"
+				RelativePath="..\..\mn_ui\src\mouse_area.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\mouse_area.h"
+				RelativePath="..\..\mn_ui\src\mouse_area.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\rectangle_component.cpp"
+				RelativePath="..\..\mn_ui\src\rectangle_component.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\rectangle_component.h"
+				RelativePath="..\..\mn_ui\src\rectangle_component.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\text_component.cpp"
+				RelativePath="..\..\mn_ui\src\text_component.cpp"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\text_component.h"
+				RelativePath="..\..\mn_ui\src\text_component.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\src\ui_main.cpp"
+				RelativePath="..\..\mn_ui\src\ui_main.cpp"
 				>
 			</File>
 			<Filter
 				Name="font"
 				>
 				<File
-					RelativePath="..\..\src\font\font.cpp"
+					RelativePath="..\..\mn_ui\src\font\font.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\font\font.h"
+					RelativePath="..\..\mn_ui\src\font\font.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\font\font_manager.cpp"
+					RelativePath="..\..\mn_ui\src\font\font_manager.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\font\font_manager.h"
+					RelativePath="..\..\mn_ui\src\font\font_manager.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\font\GlyphAtlas.cpp"
+					RelativePath="..\..\mn_ui\src\font\GlyphAtlas.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\font\GlyphAtlas.h"
+					RelativePath="..\..\mn_ui\src\font\GlyphAtlas.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\font\GlyphData.cpp"
+					RelativePath="..\..\mn_ui\src\font\GlyphData.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\src\font\GlyphData.h"
+					RelativePath="..\..\mn_ui\src\font\GlyphData.h"
 					>
 				</File>
 			</Filter>
@@ -504,87 +504,87 @@
 				Name="object"
 				>
 				<File
-					RelativePath="..\..\..\public\object\FastDelegate.h"
+					RelativePath="..\..\public\object\FastDelegate.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\FastDelegateBind.h"
+					RelativePath="..\..\public\object\FastDelegateBind.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_event_mgr.cpp"
+					RelativePath="..\..\public\object\mn_event_mgr.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_event_mgr.h"
+					RelativePath="..\..\public\object\mn_event_mgr.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_memory.h"
+					RelativePath="..\..\public\object\mn_memory.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_meta_class.h"
+					RelativePath="..\..\public\object\mn_meta_class.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_meta_field.h"
+					RelativePath="..\..\public\object\mn_meta_field.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_meta_method.h"
+					RelativePath="..\..\public\object\mn_meta_method.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_meta_method_void.h"
+					RelativePath="..\..\public\object\mn_meta_method_void.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_object.cpp"
+					RelativePath="..\..\public\object\mn_object.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_object.h"
+					RelativePath="..\..\public\object\mn_object.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_object_mgr.cpp"
+					RelativePath="..\..\public\object\mn_object_mgr.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_object_mgr.h"
+					RelativePath="..\..\public\object\mn_object_mgr.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_reflection.h"
+					RelativePath="..\..\public\object\mn_reflection.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_reflection_mgr.h"
+					RelativePath="..\..\public\object\mn_reflection_mgr.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_string.cpp"
+					RelativePath="..\..\public\object\mn_string.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_string.h"
+					RelativePath="..\..\public\object\mn_string.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_type.h"
+					RelativePath="..\..\public\object\mn_type.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_var.h"
+					RelativePath="..\..\public\object\mn_var.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_var_helper.h"
+					RelativePath="..\..\public\object\mn_var_helper.h"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\object\mn_varlist.h"
+					RelativePath="..\..\public\object\mn_varlist.h"
 					>
 				</File>
 			</Filter>
@@ -595,47 +595,47 @@
 					Name="inc"
 					>
 					<File
-						RelativePath="..\..\..\public\math\inc\mn_aabb.h"
+						RelativePath="..\..\public\math\inc\mn_aabb.h"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\inc\mn_frustum.h"
+						RelativePath="..\..\public\math\inc\mn_frustum.h"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\inc\mn_mat4f.h"
+						RelativePath="..\..\public\math\inc\mn_mat4f.h"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\inc\mn_math.h"
+						RelativePath="..\..\public\math\inc\mn_math.h"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\inc\mn_math_func.h"
+						RelativePath="..\..\public\math\inc\mn_math_func.h"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\inc\mn_plane.h"
+						RelativePath="..\..\public\math\inc\mn_plane.h"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\inc\mn_quaternion.h"
+						RelativePath="..\..\public\math\inc\mn_quaternion.h"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\inc\mn_ray.h"
+						RelativePath="..\..\public\math\inc\mn_ray.h"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\inc\mn_vec2f.h"
+						RelativePath="..\..\public\math\inc\mn_vec2f.h"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\inc\mn_vec3f.h"
+						RelativePath="..\..\public\math\inc\mn_vec3f.h"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\inc\mn_vec4f.h"
+						RelativePath="..\..\public\math\inc\mn_vec4f.h"
 						>
 					</File>
 				</Filter>
@@ -643,43 +643,43 @@
 					Name="src"
 					>
 					<File
-						RelativePath="..\..\..\public\math\src\mn_aabb.cpp"
+						RelativePath="..\..\public\math\src\mn_aabb.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\src\mn_frustum.cpp"
+						RelativePath="..\..\public\math\src\mn_frustum.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\src\mn_mat4f.cpp"
+						RelativePath="..\..\public\math\src\mn_mat4f.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\src\mn_math_func.cpp"
+						RelativePath="..\..\public\math\src\mn_math_func.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\src\mn_plane.cpp"
+						RelativePath="..\..\public\math\src\mn_plane.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\src\mn_quaternion.cpp"
+						RelativePath="..\..\public\math\src\mn_quaternion.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\src\mn_ray.cpp"
+						RelativePath="..\..\public\math\src\mn_ray.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\src\mn_vec2f.cpp"
+						RelativePath="..\..\public\math\src\mn_vec2f.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\src\mn_vec4f.cpp"
+						RelativePath="..\..\public\math\src\mn_vec4f.cpp"
 						>
 					</File>
 					<File
-						RelativePath="..\..\..\public\math\src\mn_vect3f.cpp"
+						RelativePath="..\..\public\math\src\mn_vect3f.cpp"
 						>
 					</File>
 				</Filter>
@@ -688,11 +688,11 @@
 				Name="ecs"
 				>
 				<File
-					RelativePath="..\..\..\public\ecs\mn_entity.cpp"
+					RelativePath="..\..\public\ecs\mn_entity.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\public\ecs\mn_entity.h"
+					RelativePath="..\..\public\ecs\mn_entity.h"
 					>
 				</File>
 			</Filter>

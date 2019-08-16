@@ -115,10 +115,63 @@ HWND CreateMyWindow(HINSTANCE hInstance, int width, int height, const std::strin
     return hWnd;
 }
 
+#include "platform/mn_dpi.h"
+
+// Windows Header Files:
+#include <windows.h>
+#include <windowsx.h>
+
+// C RunTime Header Files
+#include <stdlib.h>
+#include <malloc.h>
+#include <memory.h>
+#include <tchar.h>
+
+// Specific header required by the program
+//#include <shellscalingapi.h>
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, 
                    LPSTR lpCmdLine, int iCmdShow)
 {
+
+    // get desktop width, 1080 200% scale by DPI, then return 960
+    int widt1h = GetSystemMetrics(SM_CXSCREEN);
+
+
+
+    //SetProcessDPIAware();
+    HDC hdc = GetDC(NULL);
+    int _dpiX = GetDeviceCaps(hdc, LOGPIXELSX);
+    int _dpiY = GetDeviceCaps(hdc, LOGPIXELSY);
+    
+    // virtual DPI width/height
+    int height11 = GetSystemMetrics(SM_CYSCREEN);
+    int width11 = GetSystemMetrics(SM_CXSCREEN);
+
+    // real monitor physical size
+    HWND hwnd = (HWND)atoi(lpCmdLine) ;
+    HMONITOR monitor = MonitorFromWindow(hwnd, MONITOR_DEFAULTTONEAREST);
+    MONITORINFO info;
+    info.cbSize = sizeof(MONITORINFO);
+    GetMonitorInfo(monitor, &info);
+    int monitor_width = info.rcMonitor.right - info.rcMonitor.left;
+    int monitor_height = info.rcMonitor.bottom - info.rcMonitor.top;
+
+
+
+
+
+    HMONITOR hMonitor;
+    POINT    pt;
+    UINT     dpix = 0, dpiy = 0;
+    HRESULT  hr = E_FAIL;
+    // Get the DPI for the main monitor, and set the scaling factor
+    pt.x = 1;
+    pt.y = 1;
+    hMonitor = MonitorFromPoint(pt, MONITOR_DEFAULTTONEAREST);
+    //hr = GetDpiForMonitor(hMonitor, MDT_EFFECTIVE_DPI, &dpix, &dpiy);
+
+
     int width=1024;
     int height=768;
     HWND nHwnd = CreateMyWindow(hInstance, width,height, "hello", &WndProc);
