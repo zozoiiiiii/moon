@@ -11,7 +11,7 @@
 #include "mn_platform.h"
 
 #ifdef _MN_PLATFORM_WIN32_
-#include "implement/win_memory.h"
+#include "implement/memory_win.h"
 #endif
 
 #ifdef _MN_PLATFORM_ANDROID_

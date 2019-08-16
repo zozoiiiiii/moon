@@ -13,7 +13,7 @@
 #include "mn_platform.h"
 
 #ifdef _MN_PLATFORM_WIN32_
-#include "implement/win_time.h"
+#include "implement/time_win.h"
 #endif
 
 #ifdef _MN_PLATFORM_ANDROID_
