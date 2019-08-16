@@ -35,7 +35,7 @@
 #pragma once
 
 #include <stdlib.h>
-#include "mn_type.h"
+#include "platform/mn_platform.h"
 
 NS_MN_BEGIN
 

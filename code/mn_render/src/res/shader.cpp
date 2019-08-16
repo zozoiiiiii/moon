@@ -4,7 +4,7 @@
 #include <iostream>
 #include <fstream>
 //#include "mn_core.h"
-#include "public/util/file_util.h"
+#include "platform/mn_file.h"
 
 #define ogl_check_error() { \
     GLenum error = glGetError();\

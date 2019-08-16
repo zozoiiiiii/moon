@@ -2,7 +2,7 @@
 #include <algorithm>
 #include "public/object/mn_memory.h"
 #include "public/object/mn_reflection_mgr.h"
-#include "public/object/mn_string.h"
+#include "platform/mn_string.h"
 
 NS_MN_BEGIN
 

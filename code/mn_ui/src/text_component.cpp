@@ -1,7 +1,7 @@
 #include "text_component.h"
 #include "item.h"
 #include <algorithm>
-#include "public/object/mn_string.h"
+#include "platform/mn_string.h"
 
 //NS_MN_BEGIN
 
@@ -116,7 +116,7 @@ void TextComponent::genMesh()
 	int penX = pItem->GetAbsLeft();
 	int penY = pItem->GetAbsTop() + m_nMaxY;
 	int preMaxWidth = 0;
-    std::wstring wideCharStr = MN::Utf8ToWStr(m_string);
+    std::wstring wideCharStr = MNString::Utf8ToWStr(m_string);
 
 	// visit every charactor
 	for (int i=0; i<wideCharStr.length(); i++)
@@ -211,7 +211,7 @@ void TextComponent::initAtlas()
 	m_nMaxY = 0;
 
 
-    std::wstring wideCharStr = MN::Utf8ToWStr(m_string);
+    std::wstring wideCharStr = MNString::Utf8ToWStr(m_string);
 
     // visit every charactor
     for (int i=0; i<wideCharStr.length(); i++)

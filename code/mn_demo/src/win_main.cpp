@@ -9,8 +9,8 @@
 #include <iostream>
 #include <windows.h>
 #include "egl_device.h"
-#include "public/util/time_util.h"
-#include "public/util/file_util.h"
+#include "platform/mn_time.h"
+#include "platform/mn_file.h"
 #include "public/object/mn_object_mgr.h"
 #include "mn_render/inc/i_render.h"
 #include "mn_ui/inc/i_gui.h"
@@ -54,7 +54,7 @@ LRESULT CALLBACK WndProc( HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam 
 
 void LoadDll(ObjectMgr* pObjectMgr, const char* dllName)
 {
-    std::string path = FileUtil::ExePath()  + "\\" + dllName+".dll";
+    std::string path = MNFile::ExePath()  + "\\" + dllName+".dll";
     HMODULE hdll = ::LoadLibraryA(path.c_str());
 
     typedef void (*cb_Plugin)(MN::ObjectMgr*);
@@ -178,8 +178,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 
     g_eglDevice.InitDevice(nHwnd);
 
-    std::string exe_path = FileUtil::ExePath();
-    std::string pre_exe_path = FileUtil::GetPrePath(exe_path);
+    std::string exe_path = MNFile::ExePath();
+    std::string pre_exe_path = MNFile::GetPrePath(exe_path);
     std::string res = pre_exe_path + "\\res\\";
     
 
@@ -218,11 +218,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
         }
 
 
-        static sint64 lasttime = TimeUtil::TimeStamp();
+        static sint64 lasttime = MNTime::TimeStamp();
         static sint64 curtime = lasttime;
         static sint64 detla = 0;        // micro seconds
         static float fdetla = 0.0f;    // seconds
-        curtime = TimeUtil::TimeStamp();
+        curtime = MNTime::TimeStamp();
         detla = curtime - lasttime;
         fdetla = (float)(detla) / 1000.0f;
         fdetla /= 1000.0f;

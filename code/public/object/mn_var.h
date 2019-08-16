@@ -7,7 +7,7 @@
 /************************************************************************/
 #pragma once
 
-#include "mn_type.h"
+#include "platform/mn_platform.h"
 #include <string.h>
 #include <string>
 #include <wchar.h>
