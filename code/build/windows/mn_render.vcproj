@@ -41,7 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="../../;../../external/amd_ogles/include"
+				AdditionalIncludeDirectories="../../;../../external/amd_ogles/include;../../public"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;MN_INPUT_EXPORTS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -427,14 +427,6 @@
 					>
 				</File>
 				<File
-					RelativePath="..\..\public\object\mn_string.cpp"
-					>
-				</File>
-				<File
-					RelativePath="..\..\public\object\mn_string.h"
-					>
-				</File>
-				<File
 					RelativePath="..\..\public\object\mn_type.h"
 					>
 				</File>
@@ -556,18 +548,6 @@
 				</File>
 				<File
 					RelativePath="..\..\public\ecs\mn_entity.h"
-					>
-				</File>
-			</Filter>
-			<Filter
-				Name="util"
-				>
-				<File
-					RelativePath="..\..\public\util\time_util.cpp"
-					>
-				</File>
-				<File
-					RelativePath="..\..\public\util\time_util.h"
 					>
 				</File>
 			</Filter>

@@ -141,7 +141,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="../../;../../external/amd_ogles/include;../../external/freetype/include"
+				AdditionalIncludeDirectories="../../;../../external/amd_ogles/include;../../external/freetype/include;../../public"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -561,14 +561,6 @@
 				</File>
 				<File
 					RelativePath="..\..\public\object\mn_reflection_mgr.h"
-					>
-				</File>
-				<File
-					RelativePath="..\..\public\object\mn_string.cpp"
-					>
-				</File>
-				<File
-					RelativePath="..\..\public\object\mn_string.h"
 					>
 				</File>
 				<File

@@ -402,22 +402,6 @@
 		<Filter
 			Name="public"
 			>
-			<File
-				RelativePath="..\..\public\util\file_util.cpp"
-				>
-			</File>
-			<File
-				RelativePath="..\..\public\util\file_util.h"
-				>
-			</File>
-			<File
-				RelativePath="..\..\public\util\time_util.cpp"
-				>
-			</File>
-			<File
-				RelativePath="..\..\public\util\time_util.h"
-				>
-			</File>
 			<Filter
 				Name="object"
 				>
@@ -479,14 +463,6 @@
 				</File>
 				<File
 					RelativePath="..\..\public\object\mn_reflection_mgr.h"
-					>
-				</File>
-				<File
-					RelativePath="..\..\public\object\mn_string.cpp"
-					>
-				</File>
-				<File
-					RelativePath="..\..\public\object\mn_string.h"
 					>
 				</File>
 				<File
